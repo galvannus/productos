@@ -1,0 +1,20 @@
+<table class="content-table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Price</th>
+            <th>SKU</th>
+            <th>Seasonal</th>
+            <th>Image</th>
+            <th>Quantity</th>
+            <th>Category</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <%= render partial: 'product', collection: @products %>
+    </tbody>
+</table>
+
+<br>
+<%= link_to "Nuevo Producto", new_product_path %>

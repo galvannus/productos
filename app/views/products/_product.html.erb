@@ -1,0 +1,20 @@
+<tr>
+  <td><%= product.name %></td>
+  <td><%= product.price %></td>
+  <td><%= product.sku %></td>
+  <td><%= product.is_seasonal %></td>
+  <td><%= image_tag product.image, size: "50" %></td>
+  <td><%= product.quantity %></td>
+  <td><%= product.category %></td>
+  <td>
+    <%= link_to edit_product_path(product) do %>
+      Edit
+    <% end %>
+    <%= 
+      link_to 'Delete', product_path(product), data: {
+        turbo_method: :delete,
+        turbo_confirm: '¿Are you sure?'
+      }
+    %>
+  </td>
+</tr>
